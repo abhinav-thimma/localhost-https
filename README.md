@@ -2,7 +2,7 @@
 
 A simple FastAPI application.
 
-## Setup
+## Loca Machine: HTTP
 
 1.  **Create a virtual environment:**
     ```bash
@@ -14,7 +14,14 @@ A simple FastAPI application.
     uv pip sync pyproject.toml
     ```
 
-## Docker Setup
+3.  **Activate and run fastapt APP**
+    ```bash
+    source .venv/bin/activate 
+    uvicorn main:app --port 8080
+    ```
+    Open `http://0.0.0.0:8080`
+
+## Docker: HTTPS
 
 1. **Install mkcert:**
     ```
@@ -30,6 +37,8 @@ A simple FastAPI application.
     ```
 4. **Build and run the Docker container:**
     ```bash
-    docker-compose up -d --build
+    docker compose up -d --build
     ```
+    Open `https://0.0.0.0:8080`
+
 
